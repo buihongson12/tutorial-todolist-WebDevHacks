@@ -1,0 +1,78 @@
+Microsoft Windows [Version 10.0.17763.557]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\buiho>cd c:\xampp\htdocs
+
+c:\xampp\htdocs>cd todolist
+
+c:\xampp\htdocs\ToDoList>php artisan make:controller TasksController
+Controller created successfully.
+
+c:\xampp\htdocs\ToDoList>php artisan route list
+
+
+  Command "route" is not defined.
+
+  Did you mean one of these?
+      route:cache
+      route:clear
+      route:list
+
+
+
+c:\xampp\htdocs\ToDoList>php artisan route:list
++--------+-----------+------------------+--------------+----------------------------------------------+--------------+
+| Domain | Method    | URI              | Name         | Action                                       | Middleware   |
++--------+-----------+------------------+--------------+----------------------------------------------+--------------+
+|        | GET|HEAD  | /                |              | App\Http\Controllers\TasksController@index   | web          |
+|        | GET|HEAD  | api/user         |              | Closure                                      | api,auth:api |
+|        | GET|HEAD  | task             | task.index   | App\Http\Controllers\TasksController@index   | web          |
+|        | POST      | task             | task.store   | App\Http\Controllers\TasksController@store   | web          |
+|        | GET|HEAD  | task/create      | task.create  | App\Http\Controllers\TasksController@create  | web          |
+|        | GET|HEAD  | task/{task}      | task.show    | App\Http\Controllers\TasksController@show    | web          |
+|        | PUT|PATCH | task/{task}      | task.update  | App\Http\Controllers\TasksController@update  | web          |
+|        | DELETE    | task/{task}      | task.destroy | App\Http\Controllers\TasksController@destroy | web          |
+|        | GET|HEAD  | task/{task}/edit | task.edit    | App\Http\Controllers\TasksController@edit    | web          |
++--------+-----------+------------------+--------------+----------------------------------------------+--------------+
+
+c:\xampp\htdocs\ToDoList>php artisan route:list
++--------+----------+----------+------+---------+--------------+
+| Domain | Method   | URI      | Name | Action  | Middleware   |
++--------+----------+----------+------+---------+--------------+
+|        | GET|HEAD | /        |      | Closure | web          |
+|        | GET|HEAD | api/user |      | Closure | api,auth:api |
++--------+----------+----------+------+---------+--------------+
+
+c:\xampp\htdocs\ToDoList>php artisan make:controller TasksController --resource
+Controller created successfully.
+
+c:\xampp\htdocs\ToDoList>php artisan make:model Models/Task
+Model created successfully.
+
+c:\xampp\htdocs\ToDoList>php artisan make:migration create_tasks_table
+Created Migration: 2019_06_19_140714_create_tasks_table
+
+c:\xampp\htdocs\ToDoList>php artisan migrate
+Migration table created successfully.
+Migrating: 2019_06_19_140714_create_tasks_table
+Migrated:  2019_06_19_140714_create_tasks_table
+
+c:\xampp\htdocs\ToDoList>composer require "laravelcollective/html":"^5.8.0"
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing laravelcollective/html (v5.8.0): Downloading (100%)
+Writing lock file
+Generating optimized autoload files
+> Illuminate\Foundation\ComposerScripts::postAutoloadDump
+> @php artisan package:discover --ansi
+Discovered Package: beyondcode/laravel-dump-server
+Discovered Package: fideloper/proxy
+Discovered Package: laravel/tinker
+Discovered Package: laravelcollective/html
+Discovered Package: nesbot/carbon
+Discovered Package: nunomaduro/collision
+Package manifest generated successfully.
+
+c:\xampp\htdocs\ToDoList>
