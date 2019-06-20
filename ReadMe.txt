@@ -1,4 +1,5 @@
 Project này sử dụng frameword laravel 5.8
+Database nằm trong thư mục database
 
 
 Cấu hình Laravel Collective
