@@ -1,3 +1,5 @@
+Project này sử dụng frameword laravel 5.8
+
 
 Cấu hình Laravel Collective
 Mở cmd chạy lệnh: composer require "laravelcollective/html":"^5.8.0"
